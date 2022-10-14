@@ -2,19 +2,43 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.nio.file.Path;
 
+/**
+ *
+ * This class sets parameters for the graphical window
+ *
+ */
 public class MyFrame extends JFrame implements ActionListener {
 
-    Path file = null;
+    /**
+     * path to file
+     */
+    private Path file = null;
+    /**
+     * old word
+     */
     private JTextField word;
+    /**
+     * new word
+     */
     private JTextField newWord;
+    /**
+     * button for upload file
+     */
     private JButton uploadFile;
+    /**
+     * button for replace words in text
+     */
     private JButton replace;
+    /**
+     * label for return text from file
+     */
     private JLabel result;
 
-
+    /**
+     * window creation constructor
+     */
     public MyFrame() {
 
         JLabel res = new JLabel("Результат замены");
@@ -66,7 +90,7 @@ public class MyFrame extends JFrame implements ActionListener {
          */
         ReplaceWord replaceWord = new ReplaceWord();
         /**
-         *
+         * if pressed uploadFile button
          */
         if (e.getSource() == uploadFile) {
             try {
@@ -77,7 +101,7 @@ public class MyFrame extends JFrame implements ActionListener {
             }
         }
         /**
-         *
+         * if pressed replace button
          */
         if (e.getSource() == replace) {
             try {

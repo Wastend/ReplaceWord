@@ -12,7 +12,7 @@ public class ReplaceWordTest {
     /**
      * replaceWord - object of ReplaceWord
      */
-    ReplaceWord replaceWord = new ReplaceWord();
+    private ReplaceWord replaceWord = new ReplaceWord();
     @Test
     /**
      * readTextTest tests the readText method in the class ReplaceWord
